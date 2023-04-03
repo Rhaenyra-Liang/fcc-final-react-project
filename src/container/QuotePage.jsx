@@ -10,15 +10,31 @@ function QuotePage() {
     getQuote();
   }, []);
 
+  // const getQuote = () => {
+  //   fetch("http://api.quotable.io/random")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setQuoteInfo({
+  //         text: data.content,
+  //         author: data.author,
+  //       });
+  //     });
+  // };
+
   const getQuote = () => {
-    fetch("https://api.quotable.io/random")
+    fetch("https://type.fit/api/quotes")
       .then((response) => {
         return response.json();
       })
       .then((data) => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const randomQuote = data[randomIndex];
+
         setQuoteInfo({
-          text: data.content,
-          author: data.author,
+          text: randomQuote.text,
+          author: randomQuote.author,
         });
       });
   };
