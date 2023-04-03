@@ -10,7 +10,7 @@ function HomePage() {
         </p>
       </div>
       <div className="  h-[80%] flex justify-center">
-        <h1 className=" border  text-[70px] flex px-5 items-center rounded-2xl ">
+        <h1 className=" border  text-[70px] flex px-5 items-center rounded-2xl text-white ">
           Welcome to my FreeCodeCamp final project!{" "}
         </h1>
       </div>
