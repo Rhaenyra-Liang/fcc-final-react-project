@@ -9,24 +9,25 @@ function Nav() {
 
   return (
     <>
+      {/* <section className="h-screen bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500"> */}
       <img
-        className="h-16 right-0  fixed z-10"
+        className="h-16 right-0  fixed z-20 cursor-pointer"
         src={"/fccimage.png"}
         alt="logo"
         onClick={() => setIsNavbarOpen(!isNavbarOpen)}
       />
       <div
         className={`${
-          isNavbarOpen ? "right-[20%]" : "right-[0%]"
-        } h-screen flex gap-4 duration-500 fixed w-16`}
+          isNavbarOpen ? "right-[21%]" : "right-[0%]"
+        } h-screen flex gap-4 duration-500 fixed w-16 z-10`}
         // onClick={() => setIsNavbarOpen(!isNavbarOpen)}
       >
-        <nav className="flex items-start">
+        <nav className="flex items-start fixed ">
           <ul className="bg-white/20 h-16 backdrop-blur-3xl w-fit px-2 flex gap-x-7 items-center">
             <li>
-              <Link to="/quote">
+              <Link to="/home">
                 {/* <Tooltip placement="bottom" title={text1}></Tooltip> */}
-                <h1>Quote</h1>
+                <h1>Home</h1>
               </Link>
             </li>
             <li>
@@ -36,15 +37,9 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link to="/quote">
+              <Link to="/excalidraw">
                 {/* <Tooltip placement="bottom" title={text1}></Tooltip> */}
-                <h1>Quote</h1>
-              </Link>
-            </li>
-            <li>
-              <Link to="/quote">
-                {/* <Tooltip placement="bottom" title={text1}></Tooltip> */}
-                <h1>Quote</h1>
+                <h1>Excalidraw</h1>
               </Link>
             </li>
             <li>
@@ -56,6 +51,7 @@ function Nav() {
           </ul>
         </nav>
       </div>
+      {/* </section> */}
       <Outlet />
     </>
   );
