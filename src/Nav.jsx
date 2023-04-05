@@ -18,7 +18,7 @@ function Nav() {
       />
       <div
         className={`${
-          isNavbarOpen ? "right-[25%]" : "right-[0%]"
+          isNavbarOpen ? "right-[28%]" : "right-[0%]"
         } h-screen flex gap-4 duration-500 fixed w-16 z-10`}
         // onClick={() => setIsNavbarOpen(!isNavbarOpen)}
       >
@@ -43,9 +43,9 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link to="/quote">
+              <Link to="/markdown">
                 {/* <Tooltip placement="bottom" title={text1}></Tooltip> */}
-                <h1 className="text-gray-100">Quote</h1>
+                <h1 className="text-gray-100">Markdown</h1>
               </Link>
             </li>
           </ul>
